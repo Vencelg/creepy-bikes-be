@@ -114,3 +114,9 @@
    ```bash
    php artisan schedule:work
    ```
+   
+## Informace o scheduleru
+    Způsob automatické aktualizace jsem udělal přes DB seeder a Laravel scheduler.
+    Díky příkazu migrate --seed se spustí databnase/seeders/DatabaseSeeder.php, kde je metoda
+    na naplnění DB daty. Dále se scheduler postará o aktualizaci dat, tím, že smaže obsah tabulky places
+    a nahradí ho novými daty. Tento proces se opakuje každých 10 minut díky příkazu artisan schedule:work
