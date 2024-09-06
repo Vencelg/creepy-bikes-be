@@ -43,6 +43,7 @@
     ```
 
 6. **Generate an application key**:
+    * If this doesn't work, run ./vendor/bin/sail composer install again
     ```bash
     ./vendor/bin/sail artisan key:generate
     ```
@@ -72,6 +73,7 @@
     ```
 
 2. **Copy the `.env.example` file to `.env`**:
+    * Replace DB_HOST "mysql" with "127.0.0.1" if running locally
     ```bash
     cp .env.example .env
     ```
