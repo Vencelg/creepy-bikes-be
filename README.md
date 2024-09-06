@@ -53,10 +53,16 @@
     ./vendor/bin/sail artisan migrate:fresh --seed
     ```
 
-10. **Access the application**:
-    - Visit `http://localhost:80/places` for bike stop list.
-    - Visit `http://localhost:80/places/:id` for bike stop detail.
-
+8. **Access the application**:
+   - Visit `http://localhost:80/places` for bike stop list.
+   - Visit `http://localhost:80/places/:id` for bike stop detail.
+    
+9. **Start the scheduler**:
+   - Used for automatic data updating
+   ```bash
+   ./vendor/bin/sail artisan schedule:work
+   ```
+    
 ### Local Setup
 
 1. **Clone the repository**:
@@ -102,3 +108,9 @@
 8. **Access the API**:
    - Visit `http://localhost:8000/places` for bike stop list.
    - Visit `http://localhost:8000/places/:id` for bike stop detail.
+
+9. **Start the scheduler**:
+    - Used for automatic data updating
+   ```bash
+   php artisan schedule:work
+   ```
